@@ -2,12 +2,16 @@
 
 set -e
 
-echo "Enter PostgreSQL connection string (DSN):"
-read -r -s DB_URL
-echo
+DB_URL="$1"
+
+# =========================
+# Validate input
+# =========================
 
 if [ -z "$DB_URL" ]; then
-    echo "ERROR: Connection string cannot be empty"
+    echo "Usage: $0 <postgres-connection-string>"
+    echo "Example:"
+    echo "  $0 postgresql://postgres:password@127.0.0.1:5432/postgres"
     exit 1
 fi
 

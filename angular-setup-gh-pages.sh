@@ -9,7 +9,7 @@ echo "--------------------------------------------"
 read -p "Angular project name (default: app): " APP_NAME
 APP_NAME=${APP_NAME:-app}
 
-read -p "🌿 Branch to trigger deployment (default: main): " BRANCH
+read -p "Branch to trigger deployment (default: main): " BRANCH
 BRANCH=${BRANCH:-main}
 
 read -p "Output directory (default: dist/app): " OUTPUT_DIR
